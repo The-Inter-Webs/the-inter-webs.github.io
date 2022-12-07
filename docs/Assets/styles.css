@@ -43,7 +43,6 @@
 .menu-bar a:hover{background-color: rgb(255, 255, 255); color: black;}
 .menu-bar img{
     float: left;
-    width: max-content;
     margin-left: 1%;
 }
 .menu-bar div{
