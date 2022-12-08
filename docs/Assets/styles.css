@@ -50,6 +50,10 @@
 .menu-bar a i{
     font-size: 150%;
 }
+.menu-bar .setting {
+    position: absolute;
+    right: 0;
+}
 .menu-bar a:hover{background-color: rgb(255, 255, 255); color: black;}
 .menu-bar img{
     float: left;
@@ -62,4 +66,24 @@
     margin-right: 1%;
     position: relative;
     display: inline-block;
+}
+
+
+/* Image next to text */
+.image-and-text {
+    display: flexbox;
+}
+.image-and-text img {
+    float: left;
+}
+.image-and-text h1 {
+    top: -10%;
+    text-align: left;
+    display: block;
+    bottom: 0%;
+}
+.image-and-text h4 {
+    display: flexbox;
+    text-align: left;
+    font-size: large;
 }
