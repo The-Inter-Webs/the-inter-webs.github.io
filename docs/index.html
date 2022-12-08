@@ -40,16 +40,17 @@
             function settings_show_hide(){
                 $(".settings").toggle();
             }
-            function change_back(){
-                if($(".bg").css("display") == "block"){
-                    $(".bg").css("display", "none");
-                    return;
-                }
-                /*if($(".bg").css("display") == "none"){
-                    $(".bg").css("display", "block");
-                    return;
-                }*/
-            }
+            $(document).ready(function() {
+                $(".bg").css("display", "none")
+          $('input[type="checkbox"]').click(function() {
+              if($(this).prop("checked") == true) {
+                $(".bg").css("display", "block")
+              }
+              else if($(this).prop("checked") == false) {
+                $(".bg").css("display", "none")
+              }
+            });
+        });
         </script>
     </head>
     <body>
