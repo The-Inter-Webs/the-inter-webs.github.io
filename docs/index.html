@@ -8,19 +8,43 @@
         <link rel="stylesheet" href="Assets/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="Assets/logo.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <!--Title-->
         <title>The Inter Web</title>
         <!--Background and Top menu-->
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
+        <div class="background">
+            <div class="bg"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
+            <div class="menu-bar">
+        </div>
         <div class="menu-bar">
             <img src="Assets/logo.png" alt="Web Logo">
             <div>|</div>
             <a href="./index.html"><i class="fa fa-home"> Home</i></a>
             <a href="./info.html"><i class="fa fa-info"> Info</i></a>
-            <a href="#" class="setting"><i class="fa fa-gear"></i></a>
-        </div><br>
+            <button onclick='settings_show_hide()' class="setting"><i class="fa fa-gear"></i></button>
+        </div>
+        <br>
+        <div class="settings">
+            <h4>Animated Background: </h4>
+            <label class="switch" onclick="change_back()">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $(".settings").hide();
+                var click = false;
+            })
+            function settings_show_hide(){
+                $(".settings").toggle();
+            }
+            function change_back(){
+                $(".bg").css("display", "hidden")
+            }
+        </script>
     </head>
     <body>
         <div class="image-and-text">
