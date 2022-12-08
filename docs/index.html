@@ -36,13 +36,19 @@
         <script>
             $(document).ready(function(){
                 $(".settings").hide();
-                var click = false;
             })
             function settings_show_hide(){
                 $(".settings").toggle();
             }
             function change_back(){
-                $(".bg").css("display", "hidden")
+                if($(".bg").css("display") == "block"){
+                    $(".bg").css("display", "none");
+                    return;
+                }
+                /*if($(".bg").css("display") == "none"){
+                    $(".bg").css("display", "block");
+                    return;
+                }*/
             }
         </script>
     </head>
